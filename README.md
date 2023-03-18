@@ -1,6 +1,6 @@
 # Booking Application - Back End <img src="assets/logo.png" alt="drawing" width="27px"/>
 
-This project was developed using the **Spring Boot framework** with an **n-tier architecture** to understand and improve the 
+This project was developed using the **Spring Boot framework** with having **n-tier architecture** to understand and improve the 
 knowledge of **database transaction handling** with Spring Boot.
 In this project, **booking web service** is exposed as an **API** under the **bookings** resource and more information on the booking web 
 service with example test cases can be found in the below API documentation.
@@ -8,14 +8,15 @@ service with example test cases can be found in the below API documentation.
 
 #### Highlighted features of the application,
 
-- In this project, **four accounts** with the names account 1, account 2, account 3, and account 4 are formed. 
-- The respective balances of these accounts are 12,000 LKR, 10,000 LKR, 8,000 LKR, and 6,000 LKR.
+- In this project, **four accounts** with the names **account 1, account 2, account 3, and account 4** are formed.
+
+- The respective balances of these accounts are **12,000 LKR, 10,000 LKR, 8,000 LKR, and 6,000 LKR.**
 
 - If the **booking fare** is less than the balance of the account that was sent through the Payment details, a booking has been made.
 Here, there will be **two write operations** performed on the **Passenger Info** and **Payment Info** database tables.
 
-- Booking will not be performed and the transaction will be **rolled back** if the **fare** is higher than the **balance of the supplied account**.
-There won't be any write operations performed on the Payment Info or Passenger Info database tables.
+- Booking will not be performed and the transaction will be **rolled back** if the **booking fare** is higher than the **balance of the supplied account**.
+There won't be any **write operations** performed on the **Payment Info** or **Passenger Info** database tables.
 
 [//]: # (- Students are registered to the system by their NIC number.)
 
