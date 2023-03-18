@@ -40,6 +40,17 @@ public class GlobalExceptionHandler {
         return errAttributes;
     }
 
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(NullPointerException.class)
+    public Map<String, Object> NullPointerExceptionHandler(){
+        Map<String, Object> errAttributes = new LinkedHashMap<>();
+        errAttributes.put("status", HttpStatus.BAD_REQUEST.value());
+        errAttributes.put("error", HttpStatus.BAD_REQUEST.getReasonPhrase());
+        errAttributes.put("message", "Invalid JSON format");
+        errAttributes.put("timestamp", new Date().toString());
+        return errAttributes;
+    }
+
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(InsufficientAmountException.class)
     public Map<String, Object> InsufficientAmountExceptionHandler(InsufficientAmountException exp){

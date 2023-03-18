@@ -9,10 +9,10 @@ public class PaymentUtils {
     private static final Map<String, BigDecimal> paymentMap = new HashMap<>();
 
     static {
-        paymentMap.put("account 1", BigDecimal.valueOf(12000));
-        paymentMap.put("account 2", BigDecimal.valueOf(10000));
-        paymentMap.put("account 3", BigDecimal.valueOf(8000));
-        paymentMap.put("account 4", BigDecimal.valueOf(6000));
+        paymentMap.put("account 1", BigDecimal.valueOf(1200000));
+        paymentMap.put("account 2", BigDecimal.valueOf(1000000));
+        paymentMap.put("account 3", BigDecimal.valueOf(800000));
+        paymentMap.put("account 4", BigDecimal.valueOf(600000));
     }
 
     public static void validateCreditLimit(String accountNo, BigDecimal paidAmount) {

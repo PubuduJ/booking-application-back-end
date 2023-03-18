@@ -10,7 +10,7 @@ service with example test cases can be found in the below API documentation.
 
 - In this project, **four accounts** with the names **account 1, account 2, account 3, and account 4** are formed.
 
-- The respective balances of these accounts are **12,000 LKR, 10,000 LKR, 8,000 LKR, and 6,000 LKR.**
+- The respective balances of these accounts are **1,200,000 LKR, 1,000,000 LKR, 800,000 LKR, and 600,000 LKR.**
 
 - If the **booking fare** is less than the balance of the account that was sent through the Payment details, a booking has been made.
 Here, there will be **two write operations** performed on the **Passenger Info** and **Payment Info** database tables.
