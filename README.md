@@ -4,7 +4,8 @@ This project was developed using the **Spring Boot framework** with having **n-t
 knowledge of **database transaction handling** with Spring Boot.
 In this project, **booking web service** is exposed as an **API** under the **bookings** resource and more information on the booking web 
 service with example test cases can be found in the below API documentation.
-- [**Bookings API documentation**]()
+
+- [**Bookings API documentation**](https://documenter.getpostman.com/view/25306703/2s93JzLfmy)
 
 #### Highlighted features of the application,
 
@@ -18,33 +19,19 @@ Here, there will be **two write operations** performed on the **Passenger Info**
 - Booking will not be performed and the transaction will be **rolled back** if the **booking fare** is higher than the **balance of the supplied account**.
 There won't be any **write operations** performed on the **Payment Info** or **Passenger Info** database tables.
 
-[//]: # (- Students are registered to the system by their NIC number.)
-
 #### Few snapshots of the documentation
 
-[//]: # (- An attempt to update a student that does not exist in the database.<br>)
+- Transaction got rolled back.<br>
 
-[//]: # ()
 [//]: # (<img src="assets/update-error.png" alt="splash-screen" width="800px"/>)
 
-[//]: # ()
-[//]: # (- Send incorrect JSON in request payload.<br>)
+- Transaction got committed.<br>
 
-[//]: # ()
 [//]: # (<img src="assets/invalid-json.png" alt="splash-screen" width="800px"/>)
 
-[//]: # ()
-[//]: # (- An attempt to register a student that already exist in the database.<br>)
+- Send incorrect JSON in request payload..<br>
 
-[//]: # ()
 [//]: # (<img src="assets/register-error.png" alt="splash-screen" width="800px"/>)
-
-[//]: # ()
-[//]: # (- An attempt to delete a student that does not exist in the database.<br>)
-
-[//]: # ()
-[//]: # (<img src="assets/delete-error.png" alt="splash-screen" width="800px"/>)
-
 
 #### ERD of the database
 
