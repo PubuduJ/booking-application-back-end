@@ -1,6 +1,7 @@
 package lk.ijse.dep9.app.advice;
 
 import lk.ijse.dep9.app.service.exception.InsufficientAmountException;
+import lk.ijse.dep9.app.service.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.validation.FieldError;
@@ -23,9 +24,9 @@ public class GlobalExceptionHandler {
         ArrayList<String> validationErrorList = new ArrayList<>();
         List<FieldError> fieldErrors = exp.getFieldErrors();
         for (FieldError fieldError : fieldErrors) {
-            validationErrorList.add(fieldError.getField().concat(": ").concat(fieldError.getDefaultMessage()));
+            validationErrorList.add(fieldError.getDefaultMessage());
         }
-        errAttributes.put("errors", validationErrorList);
+        errAttributes.put("message", validationErrorList);
         return errAttributes;
     }
 
@@ -57,6 +58,17 @@ public class GlobalExceptionHandler {
         Map<String, Object> errAttributes = new LinkedHashMap<>();
         errAttributes.put("status", HttpStatus.INTERNAL_SERVER_ERROR.value());
         errAttributes.put("error", HttpStatus.INTERNAL_SERVER_ERROR.getReasonPhrase());
+        errAttributes.put("message", exp.getMessage());
+        errAttributes.put("timestamp", new Date().toString());
+        return errAttributes;
+    }
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ExceptionHandler(NotFoundException.class)
+    public Map<String, Object> notFoundEntityExceptionHandler(NotFoundException exp){
+        Map<String, Object> errAttributes = new LinkedHashMap<>();
+        errAttributes.put("status", HttpStatus.NOT_FOUND.value());
+        errAttributes.put("error", HttpStatus.NOT_FOUND.getReasonPhrase());
         errAttributes.put("message", exp.getMessage());
         errAttributes.put("timestamp", new Date().toString());
         return errAttributes;
