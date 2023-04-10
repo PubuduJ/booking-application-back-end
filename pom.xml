@@ -6,7 +6,7 @@
 
     <groupId>lk.ijse.dep9</groupId>
     <artifactId>booking-app</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <name>booking-app</name>
     <packaging>jar</packaging>
 
