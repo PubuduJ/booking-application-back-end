@@ -32,6 +32,6 @@ public class PassengerInfoDTO implements Serializable {
     @Future(message = "Date must be a future date")
     private Date travelDate;
     @DecimalMin(value = "10000.0", message = "Fare must be greater than 10,000")
-    @DecimalMax(value = "1000000.0", message = "Fare must be less than 1,000,000")
+    @DecimalMax(value = "10000000.0", message = "Fare must be less than 1,000,000")
     private BigDecimal fare;
 }
