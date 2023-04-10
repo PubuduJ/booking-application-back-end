@@ -19,7 +19,7 @@ public class PassengerInfoDTO implements Serializable {
     @Pattern(regexp = "^[A-Za-z][A-Za-z ]+$", message = "Invalid Passenger name")
     private String name;
     @NotBlank(message = "Passenger email cannot be empty or null")
-    @Email
+    @Email(message = "Invalid email type")
     private String email;
     @NotBlank(message = "Source cannot be empty or null")
     @Pattern(regexp = "^[A-Za-z][A-Za-z ]+$", message = "Invalid source name")
@@ -27,10 +27,11 @@ public class PassengerInfoDTO implements Serializable {
     @NotBlank(message = "Destination cannot be empty or null")
     @Pattern(regexp = "^[A-Za-z][A-Za-z ]+$", message = "Invalid destination name")
     private String destination;
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    @Future
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @NotNull(message = "Date cannot be null")
+    @Future(message = "Date must be a future date")
     private Date travelDate;
-    @DecimalMin(value = "0.0")
-    @DecimalMax(value = "10000000.0")
+    @DecimalMin(value = "10000.0", message = "Fare must be greater than 10,000")
+    @DecimalMax(value = "1000000.0", message = "Fare must be less than 1,000,000")
     private BigDecimal fare;
 }
