@@ -69,7 +69,7 @@ If neglect to create, the project will automatically generate it when it is firs
 3. Change the `spring.datasource.password` in the `application.properties` to your local machine MySQL server password.
 
 ## Version
-v1.0.2
+v1.0.3
 
 ## License
 Copyright &copy; 2023 [Pubudu Janith](https://www.linkedin.com/in/pubudujanith94/). All Rights Reserved.<br>
