@@ -7,6 +7,8 @@ service with example test cases can be found in the below API documentation.
 
 - [**Bookings API documentation**](https://documenter.getpostman.com/view/25306703/2s93JzLfmy)
 
+See the front end of the project from [here.](https://github.com/PubuduJ/booking-application-front-end)
+
 #### Highlighted features of the application,
 
 - In this project, **four accounts** with the names **account 1, account 2, account 3, and account 4** are formed.
