@@ -25,19 +25,19 @@ There won't be any **write operations** performed on the **Payment Info** or **P
 
 - Transaction got rolled back.<br>
 
-<img src="assets/roll-back.png" alt="splash-screen" width="800px"/>
+<img src="assets/roll-back.png" alt="roll-back" width="800px"/>
 
 - Transaction got committed.<br>
 
-<img src="assets/commit.png" alt="splash-screen" width="800px"/>
+<img src="assets/commit.png" alt="commit" width="800px"/>
 
 - Send incorrect JSON in request payload..<br>
 
-<img src="assets/invalid-json.png" alt="splash-screen" width="800px"/>
+<img src="assets/invalid-json.png" alt="invalid-json" width="800px"/>
 
 #### ERD of the database
 
-<img src="assets/ERD.png" alt="text-editor" width="600px"/>
+<img src="assets/ERD.png" alt="erd" width="600px"/>
 
 ## Used Technologies
 
